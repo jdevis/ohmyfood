@@ -1,14 +1,120 @@
 /** variable colors **/
+/* common */
 * {
   font-family: "Roboto", sans-serif;
 }
 
-h1, h2, h3 {
+body {
+  margin: 0;
+}
+
+h2, h3, h4 {
   font-family: "Shrikhand", sans-serif;
 }
 
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* google fonts icons */
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
+
+/* Header */
+header .logo {
+  text-align: center;
+  padding: 1em 0;
+}
+header .logo img {
+  width: 50%;
+}
+header .location {
+  text-align: center;
+  padding: 0.25em 0;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, #EAEAEA 10%, #EAEAEA 100%);
+}
+header .location i {
+  padding-right: 1em;
+}
+
+/* END Header */
+/* Footer */
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 1em 0;
+}
+footer h4 {
+  margin: 0;
+  padding: 0.5em 0;
+}
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* END Footer */
+/* only for charte.html can be delete */
+.color {
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  font-weight: bold;
+  margin: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.first {
+  background-color: #9356DC;
+}
+
+.second {
+  background-color: #FF79DA;
+}
+
+.third {
+  background-color: #99E2D0;
+}
+
+.fourth {
+  background-color: #008766;
+}
+
+.fifth {
+  background-color: #003A68;
+}
+
+.sixth {
+  background-color: #89C8FA;
+}
+
+.gray {
+  background-color: #7E7E7E;
+}
+
+.light {
+  background-color: #EAEAEA;
+}
+
+.footer {
+  background-color: #000;
+  color: #fff;
+}
+
+/* end only for charte.html can be delete */
 
 /*# sourceMappingURL=arche.css.map */

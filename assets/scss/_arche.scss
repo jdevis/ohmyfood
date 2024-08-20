@@ -3,16 +3,36 @@
 $primary-color:#9356DC;
 $secondary-color:#FF79DA;
 $third-color:#99E2D0;
-$jesaispo :#008766;
-$jesaispo2:#003A68;
-$serieux:#89C8FA;
+$fourth-color :#008766;
+$fifth-color:#003A68;
+$sixth-color:#89C8FA;
+$gray:#7E7E7E;
+$light-gray:#EAEAEA;
+$footer-bg:#000;
+$footer-color:#fff;
 
+/* common */
 * {
     font-family: "Roboto", sans-serif;
 }
-h1, h2, h3{
+body{
+    margin: 0;
+}
+h2, h3, h4{
     font-family: "Shrikhand",sans-serif;
 }
+h1{
+    font-size: 30px;
+}
+h2{
+    font-size: 28px;
+}
+ul,ol{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+/* google fonts icons */
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
@@ -20,3 +40,81 @@ h1, h2, h3{
   'GRAD' 0,
   'opsz' 24
 }
+
+/* Header */
+header{
+    .logo {
+        text-align: center;
+        padding: 1em 0;
+        img{
+            width: 50%;
+        }
+    }
+    .location {
+        text-align: center;
+        padding: .25em 0;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        background: linear-gradient(to bottom, rgba(0,0,0,0.15) 0%,$light-gray 10%,$light-gray 100%);
+        i{
+            padding-right: 1em;
+        }
+    }
+}
+/* END Header */
+
+/* Footer */
+footer{
+    background-color: $footer-bg;
+    color: $footer-color;
+    padding: 1em 0;
+    h4{
+       margin: 0;
+       padding: .5em 0; 
+    }
+    a{
+        text-decoration: none;
+        color: $footer-color;
+    }
+}
+/* END Footer */
+
+/* only for charte.html can be delete */
+.color {
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    font-weight: bold;
+    margin: .5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.first{
+    background-color: $primary-color;
+}
+.second{
+    background-color: $secondary-color;
+}
+.third{
+    background-color: $third-color;
+}
+.fourth{
+    background-color: $fourth-color;
+}
+.fifth{
+    background-color: $fifth-color;
+}
+.sixth{
+    background-color: $sixth-color;
+}
+.gray{
+    background-color: $gray;
+}
+.light{
+    background-color: $light-gray;
+}
+.footer{
+    background-color: $footer-bg;
+    color: $footer-color;
+}
+/* end only for charte.html can be delete */
