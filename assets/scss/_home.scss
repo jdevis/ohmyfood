@@ -1,0 +1,116 @@
+@use 'arche';
+
+/* main content */
+.main-title{
+    background-color: arche.$light-gray;
+    padding: 1em;
+    text-align: center;
+    margin-top: 5px;
+}
+/* steps */
+.steps{
+    padding: 2em 1em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    li{
+        margin: 1em 0 1em .5em;
+        text-align: left;
+        padding: 1.5em 0 1.5em 2.5em;
+        font-weight: bold;
+        background-color: arche.$light-gray;
+        border-radius: 1em;
+        counter-increment: count 1;
+        position: relative;
+        @include arche.box-shadows(#00000040);
+        i{
+            margin-right:20px;
+            color: arche.$dark-gray;
+        }
+    }
+    li::before{
+        content: counter(count,decimal);
+        text-align: center;
+        font-weight: normal;
+        width: 25px;
+        height: 25px;
+        border-radius: 2em;
+        background-color: arche.$primary-color;
+        color: arche.$footer-color;
+        position: absolute;
+        left: -10px;
+    }
+}
+
+/* restaurants */
+.restaurants{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2em 1em;
+    background-color: arche.$light-gray;
+    article{
+        margin: 1em 0;
+        background-color: arche.$footer-color;
+        border-radius: 1em;
+    }
+    img {
+        object-fit: cover;
+        border-top-left-radius: 1em;
+        border-top-right-radius: 1em;
+        height: 200px;
+        width: 100%;
+    }
+}
+/* loader basic
+.loader {
+    width: fit-content;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 30px;
+    color: #0000;
+    background: linear-gradient(90deg,arche.$secondary-color calc(50% + 0.5ch),arche.$primary-color 0) right/calc(200% + 1ch) 100%;
+    -webkit-background-clip: text;
+            background-clip: text;
+    animation: l7 2s infinite steps(11);
+  }
+  .loader:before {
+    content:"Loading..."
+  }
+  @keyframes l7 {to{background-position: left}}*/
+
+  /* loader heartbeat */
+.loader {
+    position: relative;
+    width: 40px;
+    height: 60px;
+    margin: auto;
+    animation: heartBeat 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  
+  .loader:before,
+  .loader:after {
+    content: "";
+    background: arche.$primary-color;
+    width: 40px;
+    height: 60px;
+    border-radius: 50px 50px 0 0;
+    position: absolute;
+    // left: 0;
+    // bottom: 0;
+    transform: rotate(45deg);
+    transform-origin: 50% 68%;
+    box-shadow: 5px 4px 5px #0004 inset;
+  }
+  .loader:after {
+    transform: rotate(-45deg);
+  }
+  @keyframes heartBeat {
+    0% { transform: scale(0.95) }
+    5% { transform: scale(1.1) }
+    39% { transform: scale(0.85) }
+    45% { transform: scale(1) }
+    60% { transform: scale(0.95) }
+    100% { transform: scale(0.9) }
+  }
+        

@@ -1,4 +1,52 @@
 
+/* Josh's Custom CSS Reset - https://www.joshwcomeau.com/css/custom-css-reset/ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img {
+  max-width: 100%; /* do not display:block for img! */
+}
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+ul,ol{
+    list-style: none;
+    padding: 0;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
 /** variable colors **/
 $primary-color:#9356DC;
 $secondary-color:#FF79DA;
@@ -6,32 +54,12 @@ $third-color:#99E2D0;
 $fourth-color :#008766;
 $fifth-color:#003A68;
 $sixth-color:#89C8FA;
-$gray:#7E7E7E;
-$light-gray:#EAEAEA;
+$dark-gray:#7e7e7e;
+$gray:#EAEAEA;
+$light-gray:#f6f6f6;
 $footer-bg:#000;
 $footer-color:#fff;
-
-/* common */
-* {
-    font-family: "Roboto", sans-serif;
-}
-body{
-    margin: 0;
-}
-h2, h3, h4{
-    font-family: "Shrikhand",sans-serif;
-}
-h1{
-    font-size: 30px;
-}
-h2{
-    font-size: 28px;
-}
-ul,ol{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+  
 /* google fonts icons */
 .material-symbols-outlined {
   font-variation-settings:
@@ -40,7 +68,31 @@ ul,ol{
   'GRAD' 0,
   'opsz' 24
 }
+/* common */
+// h2, h3, h4{
+//     font-family: "Shrikhand",sans-serif;
+// }
+h1{
+    font-size: 24px;
+}
+h2{
+    font-size: 24px;
+}
+h3,h4{
+    font-size: 18px;
+}
+@mixin box-shadows($color){
+    box-shadow: 0px 4px 15px 0px $color;
+}
+button{
+    background: linear-gradient(to top, $primary-color -11.44%, $secondary-color 123.93%);
+    border-radius: 2em;
+    color: $footer-color;
+    border: none;
+    padding: 1em;
+    @include box-shadows(#00000040);
 
+}
 /* Header */
 header{
     .logo {
@@ -52,9 +104,9 @@ header{
     }
     .location {
         text-align: center;
-        padding: .25em 0;
+        padding: .5em 0;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        background: linear-gradient(to bottom, rgba(0,0,0,0.15) 0%,$light-gray 10%,$light-gray 100%);
+        background: linear-gradient(to bottom, rgba(0,0,0,0.15) 0%,$gray 10%,$gray 100%);
         i{
             padding-right: 1em;
         }
@@ -66,7 +118,7 @@ header{
 footer{
     background-color: $footer-bg;
     color: $footer-color;
-    padding: 1em 0;
+    padding: 1em;
     h4{
        margin: 0;
        padding: .5em 0; 
@@ -74,6 +126,10 @@ footer{
     a{
         text-decoration: none;
         color: $footer-color;
+    }
+    i{
+        width: 25px;
+        padding-right: 1.5em;
     }
 }
 /* END Footer */
