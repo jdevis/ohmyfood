@@ -1,0 +1,236 @@
+/* Josh's Custom CSS Reset - https://www.joshwcomeau.com/css/custom-css-reset/ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%; /* do not display:block for img! */
+}
+
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/** variable colors **/
+/* google fonts icons */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+/* common */
+h4 {
+  font-family: "Shrikhand", sans-serif;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+button {
+  background: linear-gradient(to top, #9356DC -11.44%, #FF79DA 123.93%);
+  border-radius: 2em;
+  color: #fff;
+  border: none;
+  padding: 1em;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+}
+button:hover {
+  background: linear-gradient(to top, #9356DC -5.2%, #FF79DA 110.74%), linear-gradient(to top, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
+}
+
+/* Header */
+header .logo {
+  text-align: center;
+  padding: 1em 0;
+}
+header .logo img {
+  width: 50%;
+}
+header .location {
+  text-align: center;
+  padding: 0.85em 0;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, #EAEAEA 10%, #EAEAEA 100%);
+}
+header .location i {
+  padding-right: 1em;
+}
+
+/* END Header */
+/* Footer */
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 1em;
+}
+footer h4 {
+  margin: 0;
+  padding: 0.5em 0;
+}
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+footer i {
+  width: 25px;
+  padding-right: 1.5em;
+}
+
+/* END Footer */
+/* only for charte.html can be delete */
+.color {
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  font-weight: bold;
+  margin: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.first {
+  background-color: #9356DC;
+}
+
+.second {
+  background-color: #FF79DA;
+}
+
+.third {
+  background-color: #99E2D0;
+}
+
+.fourth {
+  background-color: #008766;
+}
+
+.fifth {
+  background-color: #003A68;
+}
+
+.sixth {
+  background-color: #89C8FA;
+}
+
+.gray {
+  background-color: #EAEAEA;
+}
+
+.light {
+  background-color: #f6f6f6;
+}
+
+.footer {
+  background-color: #000;
+  color: #fff;
+}
+
+/* end only for charte.html can be delete */
+h1 {
+  font-family: "Shrikhand", sans-serif;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+h2:after {
+  content: "";
+  display: block;
+  margin: 0;
+  width: 40px;
+  border-bottom: 2px solid #99E2D0;
+}
+
+/* animation */
+.meals {
+  animation: myAnim 2s ease 0s 1 normal backwards;
+}
+
+@keyframes myAnim {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.meals2 {
+  animation-duration: 3s;
+  animation-name: slidedown;
+}
+
+@keyframes slidedown {
+  from {
+    margin-top: 0%;
+    height: 0%;
+  }
+  to {
+    margin-top: 100%;
+    height: 100%;
+  }
+}
+
+/*# sourceMappingURL=resto.css.map */

@@ -42,6 +42,10 @@ ul,ol{
     list-style: none;
     padding: 0;
 }
+a{
+    text-decoration: none;
+    color: inherit;
+}
 #root,
 #__next {
   isolation: isolate;
@@ -69,20 +73,20 @@ $footer-color:#fff;
   'opsz' 24
 }
 /* common */
-// h2, h3, h4{
-//     font-family: "Shrikhand",sans-serif;
-// }
+h4{
+    font-family: "Shrikhand",sans-serif;
+}
 h1{
     font-size: 24px;
 }
 h2{
     font-size: 24px;
 }
-h3,h4{
+h3{
     font-size: 18px;
 }
-@mixin box-shadows($color){
-    box-shadow: 0px 4px 15px 0px $color;
+@mixin box-shadows($blur,$color){
+    box-shadow: 0px 4px $blur 0px $color;
 }
 button{
     background: linear-gradient(to top, $primary-color -11.44%, $secondary-color 123.93%);
@@ -90,8 +94,13 @@ button{
     color: $footer-color;
     border: none;
     padding: 1em;
-    @include box-shadows(#00000040);
+    @include box-shadows(10px,#00000040);
 
+    &:hover{
+        background: linear-gradient(to top, $primary-color -5.2%, $secondary-color 110.74%),
+        linear-gradient(to top, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));        
+        @include box-shadows(15px,#00000059);
+    }
 }
 /* Header */
 header{
@@ -104,8 +113,8 @@ header{
     }
     .location {
         text-align: center;
-        padding: .5em 0;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: .85em 0;
+        @include box-shadows(4px,rgba(0, 0, 0, 0.25));
         background: linear-gradient(to bottom, rgba(0,0,0,0.15) 0%,$gray 10%,$gray 100%);
         i{
             padding-right: 1em;
