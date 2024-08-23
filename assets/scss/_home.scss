@@ -34,6 +34,9 @@
             margin-right:20px;
             color: arche.$dark-gray;
         }
+        i.done{
+          color: arche.$primary-color;
+        }
     }
     li::before{
         content: counter(count,decimal);

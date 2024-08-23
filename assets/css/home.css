@@ -60,11 +60,6 @@ a {
 }
 
 /** variable colors **/
-/* google fonts icons */
-.material-symbols-outlined {
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-}
-
 /* common */
 h4 {
   font-family: "Shrikhand", sans-serif;
@@ -281,6 +276,9 @@ footer i {
 .steps li i {
   margin-right: 20px;
   color: #7e7e7e;
+}
+.steps li i.done {
+  color: #9356DC;
 }
 .steps li::before {
   content: counter(count, decimal);

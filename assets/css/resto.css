@@ -60,11 +60,6 @@ a {
 }
 
 /** variable colors **/
-/* google fonts icons */
-.material-symbols-outlined {
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-}
-
 /* common */
 h4 {
   font-family: "Shrikhand", sans-serif;
@@ -202,6 +197,54 @@ h2:after {
   border-bottom: 2px solid #99E2D0;
 }
 
+.logo a {
+  font-size: 20px;
+  margin: 5px 0 0 25px;
+  left: 0;
+  position: absolute;
+}
+
+.main-img img {
+  object-fit: cover;
+  height: 275px;
+  width: 100%;
+}
+
+.menu {
+  background-color: #EAEAEA;
+  border-top-left-radius: 2em;
+  border-top-right-radius: 2em;
+  padding: 2em 1em;
+  margin-top: -50px;
+  position: relative;
+  width: 100%;
+}
+.menu a.fav {
+  position: absolute;
+  right: 30px;
+}
+.menu a.fav:hover i {
+  color: #9356DC;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  font-weight: 600;
+  animation: myAnim 2s forwards;
+}
+.menu .starters {
+  margin: 1em 0;
+}
+.menu .starters a {
+  background: #fff;
+  display: flex;
+  border-radius: 1em;
+  margin: 1em 0;
+  padding: 1em;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+}
+
 /* animation */
 .meals {
   animation: myAnim 2s ease 0s 1 normal backwards;
@@ -210,11 +253,9 @@ h2:after {
 @keyframes myAnim {
   0% {
     opacity: 0;
-    transform: translateY(-50px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 .meals2 {
