@@ -48,16 +48,49 @@ h2:after {
       animation: myAnim 2s forwards;
     }
   }
+  button{
+    display: flex;
+    margin: 30px auto 0 auto;
+    padding: 1em 4em;
+  }
   .starters{
     margin: 1em 0;
-  }
-  .starters a {
-    background: arche.$footer-color;
-    display: flex;
-    border-radius: 1em;
-    margin: 1em 0;
-    padding: 1em;
-    @include arche.box-shadows(10px,#00000040);
+    a {
+      background: arche.$footer-color;
+      display: flex;
+      border-radius: 1em;
+      margin: 1em 0;
+      padding: 1em;
+      @include arche.box-shadows(10px,#00000040);
+      &:hover .fade, &:active .fade{
+        display: block;
+      }
+    }
+    article {
+      display: flex;
+      width: 100%;
+      .card-txt {
+        width: 80%;
+      }
+      .card-title,.card-price{
+        font-size: larger;
+        font-weight: bold;
+      }
+      .card-title,.card-subtitle{
+        text-overflow: ellipsis;
+        overflow: hidden;
+        text-wrap: nowrap;
+      }
+      .card-check {
+        justify-content: right;
+        display: flex;
+        width: 20%;
+        align-items: end;
+      }
+      .fade{
+        display: none;
+      }
+    }
   }
 }
 
