@@ -55,12 +55,14 @@ main p{
 }
 
 /* restaurants */
+.main-content{
+  padding: 2em 1em;
+  background-color: arche.$light-gray;
+}
 .restaurants{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 2em 1em;
-    background-color: arche.$light-gray;
     article{
         margin: 1em 0;
         background-color: arche.$footer-color;
@@ -101,4 +103,44 @@ main p{
         -moz-text-fill-color: transparent;
       }
     }
+}
+/* Tablets */
+@media screen and (min-width: 769px) {
+  header{
+      background-color: red;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  header{
+    background-color: blue;
+  }
+  .steps>*{
+    max-width: 1055px;
+    align-self: center;
+    width: 100%;
+  }
+  .steps{
+    ul {
+      display: flex;
+      justify-content: space-between;
+      li{
+        width: 30%;
+      }
+    }
+  }
+  .restaurants, .main-content h2{
+    margin: 0 auto;
+    max-width: 1055px;
+    width: 100%;
+  }
+  .restaurants {
+    justify-content: space-between;
+    flex-direction: initial;
+    flex-wrap: wrap;
+    article{
+      width: 495px;
+    }
+  }
 }

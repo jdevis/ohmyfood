@@ -95,18 +95,12 @@ button{
         @include box-shadows(15px,#00000059);
     }
 }
-header,main,footer{
-    max-width: 1440px;
-    margin: 0 auto;
-}
+
 /* Header */
 header{
     .logo {
         text-align: center;
         padding: 1em 0;
-        // img{
-        //     width: 50%;
-        // }
     }
     .location {
         text-align: center;
@@ -140,3 +134,39 @@ footer{
 }
 /* END Footer */
 
+/* Tablets */
+@media screen and (min-width: 769px) {
+    header{
+        background-color: red;
+    }
+    footer{
+        display: flex;
+        flex-direction: row-reverse;
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+            width: 80%;
+            align-items: center;
+        }
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    header{
+        background-color: blue;
+    }
+    h1 {
+        font-size: 36px;
+    }
+    footer{
+        display: flex;
+        flex-direction: row-reverse;
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+            width: 50%;
+            align-items: center;
+        }
+    }
+}
