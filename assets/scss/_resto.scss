@@ -1,5 +1,5 @@
 @use 'arche';
-//@use 'anim';
+@use 'anim';
 
 h1{
     font-family: "Shrikhand",sans-serif;;
@@ -55,7 +55,7 @@ h2:after {
   }
   .starters{
     margin: 1em 0;
-    //height: 0;
+    opacity: 0;
     overflow: hidden;
     position: relative;
     a {
