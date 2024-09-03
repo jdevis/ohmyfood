@@ -145,7 +145,8 @@ button {
   text-align: center;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
 }
-button:hover, button:active, button:target {
+button:hover, button:active {
+  cursor: pointer;
   background: linear-gradient(to top, #9356DC -5.2%, #FF79DA 110.74%), linear-gradient(to top, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
 }
@@ -284,7 +285,6 @@ h2:after {
   display: flex;
   border-radius: 1em;
   margin: 1em 0;
-  padding: 1em;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
   transition: transform 800ms;
 }
@@ -295,6 +295,7 @@ h2:after {
 .menu .starters article {
   display: flex;
   width: 100%;
+  padding: 1em;
 }
 .menu .starters article .card-txt {
   width: 80%;
@@ -315,14 +316,13 @@ h2:after {
   align-items: end;
 }
 .menu .starters .fade {
-  margin: -0.85em -0.85em -0.85em 1em;
   display: none;
   justify-content: center;
   align-items: center;
   background-color: #99E2D0;
   color: #008766;
   font-size: 20px;
-  border-radius: 0 1em 1em 0;
+  border-radius: 0 0.85em 0.85em 0;
 }
 .menu .starter1 {
   animation-delay: 1s;
