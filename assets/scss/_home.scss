@@ -1,5 +1,38 @@
 @use 'arche';
-@use 'anim';
+
+/* lightbox */
+.lightbox {
+  position: fixed;
+  align-content:center ;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  background: rgba(0, 0, 0, 0.8);
+  animation-name: fadeout;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+/* loader  */
+.loader {
+  width: 0;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 30px;
+  color: #0000;
+  background: linear-gradient(90deg,arche.$secondary-color calc(50% + 0.5ch),arche.$primary-color 0) right/calc(200% + 1ch) 100%;
+  background-clip: text;
+  animation: toleft 2s infinite steps(11);
+  margin: auto;
+}
+.loader:before {
+  content:"Loading..."
+}
 
 /* main content  */
 .main-title{
@@ -106,16 +139,12 @@ main p{
 }
 /* Tablets */
 @media screen and (min-width: 769px) {
-  header{
-      background-color: red;
-  }
+  
 }
 
 /* Desktop */
 @media (min-width: 1024px) {
-  header{
-    background-color: blue;
-  }
+  
   .steps>*{
     max-width: 1055px;
     align-self: center;

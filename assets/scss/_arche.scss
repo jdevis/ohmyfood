@@ -1,3 +1,4 @@
+@use 'anim';
 
 *,
 *::before,
@@ -136,9 +137,6 @@ footer{
 
 /* Tablets */
 @media screen and (min-width: 769px) {
-    header{
-        background-color: red;
-    }
     footer{
         display: flex;
         flex-direction: row-reverse;
@@ -153,9 +151,6 @@ footer{
 
 /* Desktop */
 @media (min-width: 1024px) {
-    header{
-        background-color: blue;
-    }
     h1 {
         font-size: 36px;
     }

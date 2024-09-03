@@ -1,3 +1,63 @@
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+  }
+  85% {
+    width: 100%;
+    height: 100%;
+  }
+  100% {
+    opacity: 0;
+    width: 0;
+  }
+}
+@keyframes toleft {
+  from {
+    width: 100%;
+  }
+  to {
+    background-position: left;
+  }
+}
+/* restaurants */
+@keyframes fadeIn {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideDown {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideInRight {
+  0% {
+    opacity: 0.2;
+    width: 0px;
+  }
+  100% {
+    opacity: 1;
+    width: 60px;
+  }
+}
+@keyframes slideOutRight {
+  0% {
+    opacity: 1;
+    width: 60px;
+  }
+  100% {
+    opacity: 0.2;
+    width: 0px;
+  }
+}
 *,
 *::before,
 *::after {
@@ -128,9 +188,6 @@ footer i {
 /* END Footer */
 /* Tablets */
 @media screen and (min-width: 769px) {
-  header {
-    background-color: red;
-  }
   footer {
     display: flex;
     flex-direction: row-reverse;
@@ -144,9 +201,6 @@ footer i {
 }
 /* Desktop */
 @media (min-width: 1024px) {
-  header {
-    background-color: blue;
-  }
   h1 {
     font-size: 36px;
   }
@@ -159,139 +213,6 @@ footer i {
     justify-content: space-evenly;
     width: 50%;
     align-items: center;
-  }
-}
-/* lightbox */
-.lightbox {
-  position: fixed;
-  align-content: center;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.8);
-  animation-timing-function: linear;
-  animation-name: fadeout;
-  animation-duration: 5s;
-  animation-iteration-count: 1;
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes fadeout {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-/* loader basic */
-.loader {
-  width: fit-content;
-  font-weight: bold;
-  font-family: monospace;
-  font-size: 30px;
-  color: rgba(0, 0, 0, 0);
-  background: linear-gradient(90deg, #FF79DA calc(50% + 0.5ch), #9356DC 0) right/calc(200% + 1ch) 100%;
-  background-clip: text;
-  animation: toleft 2s infinite steps(11);
-  margin: auto;
-}
-
-.loader:before {
-  content: "Loading...";
-}
-
-@keyframes toleft {
-  to {
-    background-position: left;
-  }
-}
-/* loader heartbeat */
-.loader-heartbeat {
-  position: relative;
-  width: 40px;
-  height: 60px;
-  margin: auto;
-  animation: heartBeat 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-
-.loader-heartbeat:before,
-.loader-heartbeat:after {
-  content: "";
-  background: #9356DC;
-  width: 40px;
-  height: 60px;
-  border-radius: 50px 50px 0 0;
-  position: absolute;
-  transform: rotate(45deg);
-  transform-origin: 50% 68%;
-  box-shadow: 5px 4px 5px rgba(0, 0, 0, 0.2666666667) inset;
-}
-
-.loader-heartbeat:after {
-  transform: rotate(-45deg);
-}
-
-@keyframes heartBeat {
-  0% {
-    transform: scale(0.95);
-  }
-  5% {
-    transform: scale(1.1);
-  }
-  39% {
-    transform: scale(0.85);
-  }
-  45% {
-    transform: scale(1);
-  }
-  60% {
-    transform: scale(0.95);
-  }
-  100% {
-    transform: scale(0.9);
-  }
-}
-/* restaurants */
-@keyframes fadeIn {
-  from {
-    opacity: 0.2;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes slideDown {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-@keyframes slideInRight {
-  0% {
-    opacity: 0.2;
-    width: 0px;
-  }
-  100% {
-    opacity: 1;
-    width: 60px;
   }
 }
 h1 {
@@ -410,29 +331,21 @@ h2:after {
   animation-name: slideDown;
 }
 .menu .starter2 {
-  animation-delay: 4s;
+  animation-delay: 3s;
   animation-duration: 3s;
   animation-fill-mode: forwards;
   animation-name: slideDown;
 }
 .menu .starter3 {
-  animation-delay: 7s;
+  animation-delay: 6s;
   animation-duration: 3s;
   animation-fill-mode: forwards;
   animation-name: slideDown;
 }
 
 /* Tablets */
-@media screen and (min-width: 769px) {
-  header {
-    background-color: red;
-  }
-}
 /* Desktop */
 @media (min-width: 1024px) {
-  header {
-    background-color: blue;
-  }
   .menu {
     max-width: 1055px;
     margin: -50px auto 0;
