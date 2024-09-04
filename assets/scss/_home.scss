@@ -11,7 +11,7 @@
   bottom: 0;
   width: 0;
   height: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 1);
   animation-name: fadeout;
   animation-duration: 5s;
   animation-iteration-count: 1;
@@ -128,7 +128,7 @@ main p{
       right: 0;
       margin: .5em 1em;
       font-size: 25px;
-      a:hover i{
+      i:hover {
         background: linear-gradient(193.33deg, arche.$primary-color -11.44%, arche.$secondary-color 123.93%);
         background-clip: text;
         -webkit-text-fill-color: transparent; 

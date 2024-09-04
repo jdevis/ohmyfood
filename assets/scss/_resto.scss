@@ -103,20 +103,20 @@ h2:after {
     }
   }
   .starter1{
-    animation-delay: 1s;
-    animation-duration: 3s;
+    animation-delay: 500ms;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
     animation-name: slideDown;
   }
   .starter2{
-    animation-delay: 3s;
-    animation-duration: 3s;
+    animation-delay: 1500ms;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
     animation-name: slideDown;
   }
   .starter3{
-    animation-delay: 6s;
-    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
     animation-name: slideDown;
   }
@@ -142,6 +142,7 @@ h2:after {
     }
     .starters {
       margin: 1em auto;
+      padding: 0 1em;
       max-width: 640px;
     }
   }
