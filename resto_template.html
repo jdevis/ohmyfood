@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Oh My Food</title>        
+        <!-- import fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet">
+        <!-- import icons -->
+        <script src="https://kit.fontawesome.com/420657b22d.js" crossorigin="anonymous"></script> 
+        <!-- import styles  -->
+        <link rel="stylesheet" href="./assets/css/resto.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo"><a href="index.html" title="retour à l'accueil"><i class="fa-solid fa-arrow-left"></i></a><img src="assets/images/logo/ohmyfood@2x.svg" alt="logo ohmyfood"></div>
+        </header>
+        <main>
+            <div class="main-img">
+                <img src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Image plat">
+            </div>
+            <div class="menu">
+                <h1>[Restaurant Name] <a href="#" class="fav" title="Favoris"><i class="fa-regular fa-heart"></i></a></h1>
+                <section class="starters starter1">
+                    <h2>Entrées</h2>
+                    <!-- template starters foreach -->
+                    <a href="#">
+                        <article>
+                            <div class="card-txt">
+                                <p class="card-title">[starter title]</p>
+                                <p class="card-subtitle">[starter subtitle]</p>
+                            </div>
+                            <div class="card-check">
+                                <p class="card-price">[starter price]</p>
+                            </div>
+                        </article>
+                        <i class="fa-solid fa-check fade"></i><!-- adding favorite -->
+                    </a>
+                    <!-- end template starters foreach -->
+                </section>
+                <section class="starters starter2">
+                    <h2>Plats</h2>
+                    <!-- template meals foreach -->
+                    <a href="#">
+                        <article>
+                            <div class="card-txt">
+                                <p class="card-title">[meal title]</p>
+                                <p class="card-subtitle">[meal subtitle]</p>
+                            </div>
+                            <div class="card-check">
+                                <p class="card-price">[meal price]</p>
+                            </div>
+                        </article>
+                        <i class="fa-solid fa-check fade"></i><!-- adding favorite -->
+                    </a>
+                     <!-- end template meals foreach -->
+                </section>
+                <section class="starters starter3">
+                    <h2>Desserts</h2>
+                    <!-- template desserts foreach -->
+                    <a href="#">
+                        <article>
+                            <div class="card-txt">
+                                <p class="card-title">[dessert tile]</p>
+                                <p class="card-subtitle">[dessert subtitle]</p>
+                            </div>
+                            <div class="card-check">
+                                <p class="card-price">[dessert price]</p>
+                            </div>
+                        </article>
+                        <i class="fa-solid fa-check fade"></i><!-- adding favorite -->
+                    </a>
+                    <!-- template desserts foreach -->
+                </section>
+                <button>Commander</button>
+            </div>
+        </main>
+        <footer>
+            <h4>ohmyfood</h4>
+            <ul>
+                <li>
+                    <a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a>
+                </li>
+                <li>
+                    <a href="#">Mentions légales</a>
+                </li>
+                <li>
+                    <a href="mailto:contact@ohmyfood.com">Contact</a>
+                </li>
+            </ul>
+        </footer>
+    </body>
+</html>
